@@ -2,7 +2,7 @@
 package playload;
 
 public class Payload {
-
+//Add place of google maps
     public static String addplace() {
         return "{\n" +
                 "  \"location\": {\n" +
