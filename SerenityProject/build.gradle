@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'idea'
+    id 'net.serenity-bdd.serenity-gradle-plugin' version '4.2.34'
+}
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+repositories {
+    mavenCentral()
+}
+//java{
+//    toolchain {
+//        languageVersion = JavaLanguageVersion.of(17)
+//    }
+//}
+ext{
+    serenityVersion = '4.2.10'
+}
+
+dependencies {
+    implementation("io.github.bonigarcia:webdrivermanager:6.1.0")
+    implementation("org.seleniumhq.selenium:selenium-java:4.11.0")
+
+    implementation("net.serenity-bdd:serenity-core:4.2.30")
+    implementation("net.serenity-bdd:serenity-report-resources:4.2.30")
+    implementation("net.serenity-bdd:serenity-cucumber:4.2.30")
+
+    // Provides net.thucydides.core.annotations.Managed for tests
+    testImplementation("net.serenity-bdd:serenity-junit:4.2.30")
+
+    // Use a JUnit4 variant for Serenity tests
+    testImplementation("junit:junit:4.13.2")
+
+    testImplementation("org.assertj:assertj-core:3.23.1")
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-rest-assured
+    implementation("net.serenity-bdd:serenity-rest-assured:4.2.30")
+
+    // https://mvnrepository.com/artifact/org.hamcrest/hamcrest
+    testImplementation("org.hamcrest:hamcrest:3.0")
+
+
+    implementation("tools.jackson.core:jackson-databind:3.0.3")
+
+
+
+}
+
